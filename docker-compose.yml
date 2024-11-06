@@ -1,0 +1,16 @@
+services:
+  mariadb:
+    image: mariadb:11.5.2
+    container_name: mariadb_example_go_migration
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=app
+      - MYSQL_ROOT_PASSWORD=root
+      - TZ=Europe/Berlin
+    volumes:
+      - mariadbdata:/var/lib/mysql
+
+volumes:
+  mariadbdata:
+    driver: local

@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `web` VARCHAR(255)  NULL;
